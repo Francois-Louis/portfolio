@@ -10,9 +10,10 @@ body {
   font-family: "Montserrat Regular", sans-serif;
 }
 
-#projectBtn, #profile {
-  display: none;
+main {
+  height: calc(100vh - 52px - 32px);
 }
 
-main {
+.hidden {
+  display: none;
 }
