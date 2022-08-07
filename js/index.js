@@ -8,11 +8,20 @@ const pInfos = document.querySelectorAll('.project__infos');
 const pTechnos = document.querySelectorAll('.project__technos');
 const pDescription = document.querySelectorAll('.project__description');
 const pLink = document.querySelectorAll('.project__link');
+const modalContainer = document.querySelector('.modal-container');
+const modalTriggers = document.querySelectorAll('.modal-trigger');
+
+modalTriggers.forEach(trigger => trigger.addEventListener('click', toggleModal));
+
+function toggleModal() {
+modalContainer.classList.toggle('active');
+}
 
 profileBtn.addEventListener('click', handleProfileBtnClick);
 projectBtn.addEventListener('click', handleProjectBtnClick);
 project1.addEventListener('click', handleProject1Click);
 project2.addEventListener('click', handleProject2Click);
+hireMeBtn.addEventListener('click', handleHireMeBtnClick);
 
 function handleProfileBtnClick() {
   profileBtn.classList.toggle('hidden');

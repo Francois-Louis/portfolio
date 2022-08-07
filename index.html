@@ -23,6 +23,16 @@
 </head>
 
 <body>
+  <div class="modal-container">
+    <div class="overlay modal-trigger"></div>
+    <div class="modal" role="dialog" aria-labelledby="hireMe">
+      <button type="button" class="close-modal modal-trigger" aria-label="close modal">X</button>
+      <div class="modal-content">
+        <button type="button" class="" aria-label="contact me">Me Contacter</button>
+        <button type="button" class="" aria-label="download my cv">Télécharger mon CV</button>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="brand">
       <img src="img/logo.png" alt="logo du développeur web">
@@ -43,7 +53,7 @@
         <p class="project__infos hidden">Date : Juillet 2022 | Client : Atelier Legoff</p>
         <p class="project__technos hidden">Technos : Wordpress</p>
         <img src="img/legoff.jpg" alt="">
-        <p class="project__description hidden">Descritpion: Lorem ipsum blablaba</p>
+        <p class="project__description hidden">Description: Lorem ipsum blablaba</p>
         <p class="project__link hidden"><a href="https://atelier-Legoff.fr">Visiter le site</a></p>
       </section>
       <section id="p2" class="project">
@@ -51,14 +61,36 @@
         <p class="project__infos hidden">Date : Avril 2022 | Client : Ecole O'clock</p>
         <p class="project__technos hidden">Technos : Symfony & React</p>
         <img src="img/bdp.jpeg" alt="">
-        <p class="project__description hidden">Descritpion: Lorem ipsum blablaba</p>
+        <p class="project__description hidden">Description: Lorem ipsum blablaba</p>
         <p class="project__link hidden"><a href="https://atelier-Legoff.fr">Visiter le site</a></p>
       </section>
     </article>
-    <article id="profile" class="hidden">
-      <section></section>
-      <section></section>
-      <section></section>
+    <article id="profile" class="profile hidden">
+      <section class="profile__content">
+        <img src="" alt="">
+        <p>Lorem Ipsum</p>
+        <button type="button" id="hireMe" class="modal-trigger">Me recruter</button>
+      </section>
+      <section class="profile__content">
+        <h3>Compétences</h3>
+        <h4>Front-end</h4>
+        <h4>Back-end</h4>
+        <h4>CMS</h4>
+        <h4>Environnement</h4>
+      </section>
+      <section class="profile__content">
+        <h3>Parcours</h3>
+        <h4>Expériences</h4>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <h4>Formations</h4>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </article>
   </main>
   <footer>
