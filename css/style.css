@@ -1,6 +1,75 @@
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("fonts/Montserrat-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("fonts/Montserrat-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("fonts/Montserrat-Regular.ttf") format("ttf");
+}
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-family: "Montserrat Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+header {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  max-height: 52px;
+}
+header .brand {
+  display: flex;
+}
+header .brand img {
+  width: 36px;
+  height: 36px;
+  margin-right: 0.5rem;
+}
+header .brand__name {
+  text-align: center;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav a {
+  text-transform: uppercase;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-height: 32px;
+  width: 100vw;
+}
+footer ul {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
 body {
   background-color: #222b33;
   color: #f1f2f2;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+#projectBtn, #profile {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
