@@ -26,7 +26,7 @@ const Modal = () => {
         <button type="button" className="close-modal modal-trigger" aria-label="close modal" onClick={handleModal}>X</button>
         <div className="modal-content">
           <button type="button" className="" aria-label="contact me"><a href="mailto://fl-toussaint@protonmail.com">Me contacter</a></button>
-          <button type="button" className="" aria-label="download my cv"><a href="./dl">Télécharger mon CV</a></button>
+          <button type="button" className="" aria-label="download my cv"><a href="http://localhost:8080/assets/dl/CV-FL-TOUSSAINT.pdf" download>Télécharger mon CV</a></button>
         </div>
       </div>
     </div>
