@@ -1,11 +1,22 @@
-import './profile.scss';
+import './author.scss';
+import {useDispatch} from "react-redux";
+import {toggleModal} from "../../../actions/actions";
+import photo from "../../../assets/img/fl-toussaint.JPG";
 
-const Profile = () => {
+const Author = () => {
+  const dispatch = useDispatch();
+
+  function handleModal() {
+    dispatch(toggleModal());
+  }
+
   return (
-    <div className="projects">
-      <h1>Profile</h1>
+    <div className="author">
+      <img src={photo} alt="Portrait de François-Louis Toussaint"/>
+      <p>Lorem Ipsum</p>
+      <button type="button" onClick={handleModal}>Me recruter</button>
     </div>
   );
 }
 
-export default Profile;
+export default Author;

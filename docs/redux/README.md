@@ -6,7 +6,7 @@
 
 ## Mise en place du store
 
-- créer un reducer : `src/reducers/nameForTheReducer.js`
+- créer un rootReducer : `src/reducers/nameForTheReducer.js`
 
 ```js
 const initialState = {
@@ -32,11 +32,11 @@ import { createStore } from 'redux';
 
 import { devToolsEnhancer } from 'redux-devtools-extension';
 
-import reducer from 'src/reducers/nameForTheReducer';
+import rootReducer from 'src/reducers/nameForTheReducer';
 
 const store = createStore(
-  // reducer
-  reducer,
+  // rootReducer
+  rootReducer,
   // enhancer
   devToolsEnhancer(),
 );
@@ -106,7 +106,7 @@ const MyComponent = () => {
  });
 ```
 
-puis ajouter le traitement de cette action dans un reducer (= quel est l'impact de cette action sur le state)
+puis ajouter le traitement de cette action dans un rootReducer (= quel est l'impact de cette action sur le state)
 
 ```javascript
 import { DO_SOMETHING } from 'src/actions/nameForTheActions';

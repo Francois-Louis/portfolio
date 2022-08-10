@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from 'src/reducers/rootReducer';
-import mainMiddleware from 'src/middlewares/mainMiddleware';
+import thunk from 'redux-thunk';
+import rootReducer from '../reducers/rootReducer';
+import mainMiddleware from '../middlewares/mainMiddleware.js';
 
 declare global {
   interface Window {
@@ -12,6 +13,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancers = composeEnhancers(
   applyMiddleware(
+    thunk,
     mainMiddleware,
   ),
 );

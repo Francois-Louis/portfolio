@@ -1,11 +1,11 @@
-import './profile.scss';
+import './xp.scss';
 
-const Profile = () => {
+const Xp = () => {
   return (
-    <div className="projects">
+    <div className="xp">
       <h1>Profile</h1>
     </div>
   );
 }
 
-export default Profile;
+export default Xp;

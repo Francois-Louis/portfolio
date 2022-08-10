@@ -1,13 +1,8 @@
-import { TOGGLE_BTN } from "../actions/actions";
+import { TOGGLE_BTN, ON_PROJECTS, TOGGLE_MODAL } from "../actions/actions";
 
-interface initialState {
-    ProjectBtn: boolean;
-    Projects: Array<any>;
-    Skills: Array<any>;
-    Contact: Array<any>;
-}
 const initialState = {
   ProjectBtn: true,
+  Modal: false,
   Projects: [{
     id: 1,
     name: 'Boule de poil',
@@ -49,7 +44,6 @@ const initialState = {
       ],
     }
   ],
-  Skills: [],
   XP: [],
 };
 
@@ -58,10 +52,18 @@ const mainReducer = (state = initialState, action = {}) => {
     case 'TOGGLE_BTN':
       return {
         ...state,
-        ProjectBtn: (state, action: PayloadAction<boolean>) => {
-          state.value += action.payload;
-        }
+        ProjectBtn: !state.ProjectBtn,
       };
+      case 'ON_PROJECTS':
+        return {
+          ...state,
+          ProjectBtn: action.payload,
+        };
+    case 'TOGGLE_MODAL':
+      return {
+        ...state,
+        Modal: !state.Modal,
+      }
     default:
       return state;
   }
