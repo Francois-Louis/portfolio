@@ -2,6 +2,9 @@
   margin-top: 2em;
   padding-bottom: 4em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   & h3 {
     font-size: 1em;
     text-transform: uppercase;
@@ -13,6 +16,7 @@
       text-transform: uppercase;
       font-size: 0.8em;
       margin-bottom: 0.75em;
+
     }
     & h5 {
       font-family: "Montserrat Light", sans-serif;
@@ -28,14 +32,45 @@
   &__item::after{
     content: "";
     display: block;
-    margin-left: 12.5%;
-    width: 75%;
+    margin-left: calc(50% - 100px);
+    width: 200px;
     height: 1px;
     background-color: #f1f2f2;
     margin-top: 1em;
   }
   &__item:last-child::after {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+.xp {
+  order: -1;
+  width: 40vw;
+  margin-top: 0;
+  &__item {
+    width: 40vw;
+    text-align: center;
+    & p {
+
+      width: 40vw;
+    }
+  }
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .xp {
+    width: 25vw;
+    padding-bottom: 2em;
+    margin: 0 3em;
+    &__item {
+      width: 25vw;
+      text-align: center;
+      & p {
+        width: 25vw;
+      }
+    }
   }
 }
 

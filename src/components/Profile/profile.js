@@ -19,8 +19,10 @@ const Profile = () => {
     <div className="profile">
       <Modal />
       <Author />
+      <div className="profile__infos">
       <Skills />
       <Xp />
+      </div>
     </div>
   );
 }

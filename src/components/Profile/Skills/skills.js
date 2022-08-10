@@ -28,6 +28,7 @@ const Skills = () => {
         <li>Git</li>
         <li>Visual Studio Code</li>
         <li>IntelliJ</li>
+        <li>Docker</li>
       </ul>
     </div>
   );
