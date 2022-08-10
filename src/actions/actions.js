@@ -1,18 +1,19 @@
 export const TOGGLE_BTN = 'TOGGLE_BTN';
-export const ON_PROJECTS = 'ON_PROJECTS';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
+export const TO_SHOW = 'TO_SHOW';
 
-export const toggleBtn = () => ({
+export const toggleBtn = (slug) => ({
   type: TOGGLE_BTN,
-});
-
-export const onProjects = (bool) => ({
-  type: ON_PROJECTS,
-  payload: bool,
+  payload: slug,
 });
 
 export const toggleModal = () => ({
   type: TOGGLE_MODAL,
+});
+
+export const toShow = (slug) => ({
+  type: TO_SHOW,
+  payload: slug,
 });
 
 

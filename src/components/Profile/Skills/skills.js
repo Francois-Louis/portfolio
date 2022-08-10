@@ -3,7 +3,8 @@ import './skills.scss';
 const Skills = () => {
   return (
     <div className="skills">
-      <h3>Frontend</h3>
+      <h3>Compétences</h3>
+      <h4>Frontend</h4>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -13,16 +14,16 @@ const Skills = () => {
         <li>Sass</li>
         <li>Greensock</li>
       </ul>
-      <h3>Backend</h3>
+      <h4>Backend</h4>
       <ul>
         <li>PHP</li>
         <li>Symfony</li>
       </ul>
-      <h3>CMS</h3>
+      <h4>CMS</h4>
       <ul>
         <li>Wordpress</li>
       </ul>
-      <h3>Environnement</h3>
+      <h4>Environnement</h4>
       <ul>
         <li>Git</li>
         <li>Visual Studio Code</li>

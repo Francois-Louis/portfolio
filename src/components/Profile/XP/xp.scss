@@ -1,0 +1,28 @@
+.xp {
+  margin-top: 2em;
+  padding-bottom: 4em;
+  text-align: center;
+  & h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  &__item {
+    margin-top: 1em;
+    & h4 {
+      text-transform: uppercase;
+      font-family: "Montserrat Light", sans-serif;
+      font-size: 0.8em;
+      margin-bottom: 0.5em;
+    }
+    & h5 {
+      font-family: "Montserrat Light", sans-serif;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+    }
+    & p {
+      font-family: "Montserrat Light", sans-serif;
+      font-size: 0.9em;
+    }
+  }
+}
+

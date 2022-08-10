@@ -4,19 +4,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(ScrollTrigger, Draggable);
 import {useEffect, useRef} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {toggleBtn} from "../../actions/actions";
 
-const Gallery = () => {
+const Gallery = (toShow) => {
   const galleryRef = useRef();
   const cardsRef = useRef();
+  const dispatch = useDispatch();
+  const id = toShow.toShow
+  const projects = useSelector((state) => (state.Reducer.Projects))
+  const show = projects[id]
 
   useEffect(() => {
-    const header = document.getElementById("header");
-    header.style.position = "fixed";
-    const footer = document.getElementById("footer");
-    footer.style.position = "fixed";
-
+    dispatch(toggleBtn('back'));
+    ScrollTrigger.enable();
     for (let i = 0; i < 8; i++) {
-      const src = `http://localhost:8080/assets/img/legoff/legoff${i + 1}.jpg`;
+      const src = `http://localhost:8080/assets/img/${show.slug}/${show.slug}${i + 1}.jpg`;
       const card = document.createElement('img');
       card.src =src;
       cardsRef.current.appendChild(card);
@@ -72,8 +75,6 @@ const Gallery = () => {
         trigger.scroll(scrollTo);
         trigger.update(); // by default, when we trigger.scroll(), it waits 1 tick to update().
       };
-
-    console.log(cards);
 
 // when the user stops scrolling, snap to the closest item.
     ScrollTrigger.addEventListener("scrollEnd", () => scrollToOffset(scrub.vars.offset));
@@ -137,16 +138,29 @@ const Gallery = () => {
         scrollToOffset(scrub.vars.offset);
       }
     });
-  });
+    return () => {
+      ScrollTrigger.disable();
+    };
+  },);
 
   return (
     <div className="show">
+      <div className="show__title">
+        <h3>{show.name}</h3>
+        <p>{show.date}</p>
+        <p>{show.technos}</p>
+      </div>
       <div className="gallery" ref={galleryRef}>
         <div className="cards" ref={cardsRef}>
         </div>
       </div>
       <div className="drag-proxy"></div>
+      <div className="show__infos">
+        <p>{show.description}</p>
+        <a href={show.link}>Visiter</a>
+      </div>
     </div>
+
   );
 }
 

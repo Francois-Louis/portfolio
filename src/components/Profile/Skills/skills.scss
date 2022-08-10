@@ -1,0 +1,22 @@
+.skills {
+  margin-top: 1em;
+  text-align: center;
+  & h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  & h4 {
+    text-transform: uppercase;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  & ul {
+    & li {
+      font-family: "Montserrat Light", sans-serif;
+      font-size: 0.9em;
+      margin-bottom: 0.25em;
+    }
+  }
+}

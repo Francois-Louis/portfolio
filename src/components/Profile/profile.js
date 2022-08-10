@@ -9,6 +9,10 @@ import Modal from "../Modal/modal";
 
 const Profile = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(toggleBtn('profile'));
+  },);
   
 
   return (

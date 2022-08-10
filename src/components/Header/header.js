@@ -2,24 +2,26 @@ import './header.scss';
 import logo from '../../assets/img/logo.png';
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {onProjects, toggleBtn} from "../../actions/actions";
-
 
 const Header = () => {
-  const projectBtn = useSelector((state) => (state.Reducer.ProjectBtn));
-  const dispatch = useDispatch();
+  const btn = useSelector((state) => (state.Reducer.Btn));
+  let link
 
-  function handleClickBtn() {
-    dispatch(toggleBtn());
-  }
-
-  function handleClickHome() {
-    dispatch(onProjects(true));
+  switch (btn) {
+    case 'projects':
+      link = <Link to="/profil">Profil</Link>
+      break;
+    case 'profile':
+      link = <Link to="/projets">Projets</Link>
+      break;
+      case 'back':
+        link = <Link to="/projets">Retour</Link>
+        break;
   }
 
     return (
         <header id="header">
-          <Link to="/" onClick={handleClickHome}>
+          <Link to="/">
           <div className="brand">
             <img src={logo} alt="logo du développeur web" />
               <div className="brand__name">
@@ -29,7 +31,7 @@ const Header = () => {
           </div>
           </Link>
           <nav>
-            {projectBtn ? (<Link to="/profil" onClick={handleClickBtn}>Profil</Link>) : (<Link to="/projets" onClick={handleClickBtn}>Projets</Link>)}
+            {link}
           </nav>
         </header>
     );
