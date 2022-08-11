@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 import {useEffect, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {toggleBtn} from "../../actions/actions";
+import Transition from "../Transition/transition";
 
 const Gallery = (toShow) => {
   const galleryRef = useRef();
@@ -14,6 +15,15 @@ const Gallery = (toShow) => {
   const id = toShow.toShow
   const projects = useSelector((state) => (state.Reducer.Projects))
   const show = projects[id]
+  const motion = gsap.timeline();
+
+  const onEnter = ({ currentTarget }) => {
+    gsap.to(currentTarget, { color: "#FCAA26",scale: 1.2 });
+  };
+
+  const onLeave = ({ currentTarget }) => {
+    gsap.to(currentTarget, { color: "#f1f2f2",scale: 1 });
+  };
 
   useEffect(() => {
     dispatch(toggleBtn('back'));
@@ -144,23 +154,25 @@ const Gallery = (toShow) => {
   },);
 
   return (
-    <div className="show">
-      <div className="show__title">
-        <h3>{show.name}</h3>
-        <p>{show.date}</p>
-        <p>{show.technos}</p>
-      </div>
-      <div className="gallery" ref={galleryRef}>
-        <div className="cards" ref={cardsRef}>
+    <>
+      <Transition timeline={motion}/>
+      <div className="show">
+        <div className="show__title">
+          <h3>{show.name}</h3>
+          <p>{show.date}</p>
+          <p>{show.technos}</p>
+        </div>
+        <div className="gallery" ref={galleryRef}>
+          <div className="cards" ref={cardsRef}>
+          </div>
+        </div>
+        <div className="drag-proxy"></div>
+        <div className="show__infos">
+          <p>{show.description}</p>
+          <a onMouseEnter={onEnter} onMouseLeave={onLeave} href={show.link}>Visiter</a>
         </div>
       </div>
-      <div className="drag-proxy"></div>
-      <div className="show__infos">
-        <p>{show.description}</p>
-        <a href={show.link}>Visiter</a>
-      </div>
-    </div>
-
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ const initialState = {
     date: 'Avril 2022',
     technos: 'Symfony & React',
     link: 'https://bdp.fl-toussaint.fr',
-    thumbnail: 'bdp/bdp.jpeg',
+    thumbnail: 'boules-de-poil/bdp.jpeg',
   },
     {
       id: 2,
@@ -22,7 +22,7 @@ const initialState = {
       date: 'Juillet 2022',
       technos: 'Wordpress',
       link: 'https://atelier-legoff.fr',
-      thumbnail: 'legoff/legoff.jpg',
+      thumbnail: 'atelier-legoff/legoff.jpg',
     }
   ],
   Xp: [{
