@@ -1,6 +1,6 @@
 header {
-  background-color: #222b33;
   position: fixed;
+  background-color: rgba(255,252,242,1);
   padding: 0.5em;
   width: 100vw;
   display: flex;
@@ -12,6 +12,7 @@ header {
     align-items: center;
     & a {
       text-transform: uppercase;
+      font-family: "Rubik", sans-serif;
     }
   }
 }
@@ -30,7 +31,7 @@ header {
     margin-bottom: 0.1em;
   }
   & h2 {
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Karla", sans-serif;
     font-size: 0.8em;
     text-transform: uppercase;
     text-align: center;
@@ -39,6 +40,7 @@ header {
 
 @media screen and (min-width: 768px) {
 header {
+  background-color: transparent;
   padding: 0.75em;
 }
 }

@@ -1,21 +1,28 @@
 import React, {useRef, useEffect} from 'react';
 import './transition.scss';
-import { SlowMo } from 'gsap/EasePack';
+import { ExpoScaleEase } from 'gsap/EasePack';
 function Transition({timeline}) {
   const trans1 = useRef(null);
 
   useEffect(() => {
     timeline.to(trans1.current, {
-      duration: 0.5,
-      yPercent: -100,
-      ease: SlowMo.config(0.1, 0.4, false),
-    },);
-
+      duration: 0.8,
+      width: "100%",
+      xPercent: 0,
+      ease: "expo.inOut",
+    });
+    timeline.to(trans1.current, {
+      duration: 0.6,
+      width: "100%",
+      xPercent: 100,
+      ease: "expo.inOut",
+      delay: 0.2,
+    });
+    timeline.set(trans1.current, { xPercent: -100 });
   })
   return (
-    <div>
+    <div className="load">
       <div className="transition-effect1" ref={trans1}></div>
-
     </div>
   )
 }

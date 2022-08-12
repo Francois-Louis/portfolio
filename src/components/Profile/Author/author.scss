@@ -9,17 +9,18 @@
     width: 10em;
     height: 10em;
     border-radius: 50%;
+    box-shadow: rgba(81, 23, 48, 0.35) 0px 5px 15px;
   }
   & p{
     text-align: center;
     margin-top: 1em;
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Karla", sans-serif;
     font-size: 0.9em;
     line-height: 1.2em;
   }
   & button {
-    background: #FCAA26;
-    color: #0E0D12;
+    background: #511730;
+    color: #FFFCF2;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;

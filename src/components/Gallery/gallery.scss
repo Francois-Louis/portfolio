@@ -29,7 +29,6 @@
 
 .show__title {
   z-index: 800;
-  background-color: #222b33;
   position: fixed;
   top: 8%;
   left: 50%;
@@ -43,7 +42,7 @@
     font-weight: bold;
   }
   & p {
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Karla", sans-serif;
     padding-top: 0.5em;
     font-size: 0.9em;
   }
@@ -51,7 +50,6 @@
 
 .show__infos {
   z-index: 800;
-  background-color: #222b33;
   position: fixed;
   top: 85%;
   left: 50%;
@@ -63,7 +61,7 @@
     width: 90vw;
     margin-left: 5%;
     padding-top: 10%;
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Rubil", sans-serif;
     font-size: 0.9em;
     padding-bottom: 2em;
   }

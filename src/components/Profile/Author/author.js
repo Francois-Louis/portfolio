@@ -8,11 +8,11 @@ import {useEffect, useRef} from "react";
 const Author = () => {
   const dispatch = useDispatch();
   const onEnterBtn = ({ currentTarget }) => {
-    gsap.to(currentTarget, { scale: 1.2 });
+    gsap.to(currentTarget, { backgroundColor: "#320A28", scale: 1.2 });
   };
 
   const onLeaveBtn = ({ currentTarget }) => {
-    gsap.to(currentTarget, { scale: 1 });
+    gsap.to(currentTarget, { backgroundColor: "#511730", scale: 1 });
   };
 
   useEffect(() => {

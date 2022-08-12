@@ -12,12 +12,12 @@ const Projects = () => {
   const homeimg = useRef(null);
   const dispatch = useDispatch();
 
+  // motion for hover effect
   const onEnter = ({ currentTarget }) => {
-    gsap.to(currentTarget, { color: "#FCAA26",scale: 1.2 });
+    gsap.to(currentTarget, { color: "#511730",scale: 1.2 });
   };
-
   const onLeave = ({ currentTarget }) => {
-    gsap.to(currentTarget, { color: "#f1f2f2",scale: 1 });
+    gsap.to(currentTarget, { color: "#DD625B",scale: 1 });
   };
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 footer {
   z-index: 800;
-  background-color: #222b33;
+  background-color: rgba(224,214,138,1);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -13,6 +13,7 @@ footer {
        & a {
          text-transform: uppercase;
          font-size: 0.8em;
+         font-family: "Rubik", sans-serif;
        }
      }
    }
@@ -20,6 +21,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   footer {
+    background-color: transparent;
     margin: 0.75em;
     width: auto;
     & ul {

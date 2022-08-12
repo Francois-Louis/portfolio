@@ -20,17 +20,17 @@
     width: 100px;
     height: 1px;
     margin-left: calc(50% - 50px);
-    background-color: #f1f2f2;
+    background-color: #DD625B;
     margin-top: 1em;
     margin-bottom: 1em;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    box-shadow: rgba(81, 23, 48, 0.45) 0px 25px 20px -20px;
   }
   & .firstChild::before {
     display: none;
   }
   & ul {
     & li {
-      font-family: "Montserrat Light", sans-serif;
+      font-family: "Karla", sans-serif;
       font-size: 0.9em;
       line-height: 1.2em;
     }
