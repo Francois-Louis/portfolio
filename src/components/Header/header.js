@@ -45,8 +45,10 @@ const Header = () => {
       x: +100,
       opacity: 0
     },"1.6")
+    return () => {
+      motion.kill();
+    }
   },);
-
 
     return (
         <header id="header">

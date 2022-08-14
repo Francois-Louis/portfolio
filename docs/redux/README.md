@@ -24,7 +24,7 @@ export default nameForTheReducer;
 
 ```
 
-- créer le store : `src/store/index.tsx`
+- créer le store : `src/store/index.js`
 
 ```js
 

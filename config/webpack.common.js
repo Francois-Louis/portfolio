@@ -13,7 +13,7 @@ module.exports = {
     // SCSS
     paths.src + '/styles/index.scss',
     // JS
-    paths.src + '/index.tsx' +
+    paths.src + '/index.js' +
     '' +
     '',
   ],
