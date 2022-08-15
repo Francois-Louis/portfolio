@@ -1,14 +1,47 @@
+.gallery {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cards {
+  position: absolute;
+  width: 90vw;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards img {
+  padding: 0;
+  margin: 0;
+  width: 90vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.8rem;
+  box-shadow: rgba(81, 23, 48, 0.35) 0px 5px 15px;
+}
+
+.drag-proxy {
+  visibility: hidden;
+  position: absolute;
+}
+
 .show {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   &__title {
+    background-color: rgba(255,252,242,1);
     z-index: 800;
     width: 100vw;
     text-align: center;
-    margin-top: 10vh;
+    padding-top: 10vh;
     & h3 {
       text-transform: uppercase;
       font-weight: bold;
@@ -25,6 +58,7 @@
     width: 100vw;
     text-align: center;
     margin-top: 55vh;
+    background-color: rgba(224,214,138,1);
     & p {
       padding: 0 5vw;
       margin-bottom: 1.5em;
@@ -44,56 +78,60 @@
   width: 80px;
 margin-right: auto;
   margin-left: auto;
+  margin-bottom: 5em;
 }
 
 @media screen and (min-width: 375px) {
   .show__infos {
-
+    margin-top: 57.5vh;
     & p {
-
+      padding-top: 1em;
     }
   }
 }
 
 @media screen and (min-width: 425px) {
-  .show__infos {
 
-    & p {
-
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {
+  .cards {
+    width: 70vw;
+    top: 30%;
+  }
+  .cards img {
+    width: 70vw;
+  }
   .show__title {
-
-    & p {
-
-    }
+    background-color: transparent;
   }
   .show__infos {
-
-    & p {
-
-    }
+    background-color: transparent;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .show__title {
-
+  .cards {
+    width: 55vw;
+    top: 27.5%;
+  }
+  .cards img {
+    width: 55vw;
+  }
+  .show__infos {
+    margin-top: 52.5vh;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .show__title {
-
-
+  .cards {
+    top: 25%;
+    width: 40vw;
+    & img {
+      width: 40vw;
+    }
   }
   .show__infos {
-
-    & p {
-
-    }
+    margin-top: 52.5vh;
   }
 }
